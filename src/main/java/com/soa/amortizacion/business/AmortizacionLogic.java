@@ -14,7 +14,7 @@ public class AmortizacionLogic {
         double saldoInicial = montoTotal;
         double interesMensual = interesAnual / 12;
         double cuota = montoTotal * ((interesMensual)
-                / (1 - Math.pow((1 + (.11 / 12)), (-1 * numeroPagos))));
+                / (1 - Math.pow((1 + (interesMensual)), (-1 * numeroPagos))));
 
         for (int i = 1; i <= numeroPagos; i++) {
             Registro tempReg = tabla.addNewRegistro();
